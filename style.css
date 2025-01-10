@@ -7,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: rgb(128 0 0 / 50%);
+    background: rgba(90, 200, 255, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
