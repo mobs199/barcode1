@@ -8,7 +8,6 @@ function domReady(fn) {
 
 domReady(function () {
     function onScanSuccess(decodeText, decodeResult) {
-        alert("Der QR-Code ist: " + decodeText);
         document.getElementById("QR-Link").value = decodeText;
     }
 
