@@ -1,28 +1,34 @@
-<!-- Index.html file -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="style.css">
-    <title>QR Code Scanner / Reader
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code Scanner / Reader</title>
 </head>
 
 <body>
     <div class="container">
         <h1>Scan QR Codes</h1>
         <div class="section">
-            <div id="my-qr-reader">
-            </div>
+            <div id="my-qr-reader"></div>
         </div>
+
+        <form action="post">
+            <div class="Sendung">
+                <input type="text" id="QR-Link" placeholder="https://dringend.ewanto.de/0000000" autofocus readonly>
+                <br>
+                <button id="sendungsnummer" type="button">Extract Sendungsnummer</button>
+                <br>
+                <input type="text" id="Sd-Nr" readonly>
+                <br>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </div>
-    <script
-        src="https://unpkg.com/html5-qrcode">
-    </script>
+    
+    <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="main.js"></script>
 </body>
 

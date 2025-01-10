@@ -1,72 +1,117 @@
-/* style.css file*/
-body {
-    display: flex;
-    justify-content: center;
+
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
     box-sizing: border-box;
-    text-align: center;
-    background: rgb(128 0 0 / 66%);
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(128 0 0 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
 .container {
+    max-width: 480px;
     width: 100%;
-    max-width: 500px;
-    margin: 5px;
+    padding: 20px;
 }
 
 .container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
     color: #ffffff;
 }
 
 .section {
     background-color: #ffffff;
-    padding: 50px 30px;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 0.25em;
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #my-qr-reader {
-    padding: 20px !important;
-    border: 1.5px solid #b2b2b2 !important;
+    padding: 20px;
+    border: 2px solid #b2b2b2;
     border-radius: 8px;
-}
-
-#my-qr-reader img[alt="Info icon"] {
-    display: none;
-}
-
-#my-qr-reader img[alt="Camera based scan"] {
-    width: 100px !important;
-    height: 100px !important;
+    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: 1px solid #b2b2b2;
-    outline: none;
     border-radius: 0.25em;
-    color: white;
-    font-size: 15px;
+    background-color: #008000;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     margin-top: 15px;
-    margin-bottom: 10px;
-    background-color: #008000ad;
-    transition: 0.3s background-color;
 }
 
 button:hover {
+    background-color: #006400;
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #008000;
+    background-color: #fff;
+}
+
+input[type="submit"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 0.25em;
     background-color: #008000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #006400;
 }
 
 #html5-qrcode-anchor-scan-type-change {
-    text-decoration: none !important;
+    text-decoration: none;
     color: #1d9bf0;
 }
 
 video {
-    width: 100% !important;
-    border: 1px solid #b2b2b2 !important;
-    border-radius: 0.25em;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #b2b2b2;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
