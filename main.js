@@ -9,6 +9,7 @@ function domReady(fn) {
 domReady(function () {
     function onScanSuccess(decodeText, decodeResult) {
         document.getElementById("QR-Link").value = decodeText;
+        loopUpSendungNummer();
     }
 
     const htmlscanner = new Html5QrcodeScanner("my-qr-reader", {
@@ -19,7 +20,7 @@ domReady(function () {
     htmlscanner.render(onScanSuccess);
 });
 
-function sendungsnummer() {
+function loopUpSendungNummer() {
     const link = document.getElementById("QR-Link").value;
     console.log("Eingegebener Link: " + link);
 
@@ -39,6 +40,7 @@ function sendungsnummer() {
 
     if (sendungsnummer) {
         document.getElementById("Sd-Nr").value = sendungsnummer;
+        fetchRetourData(sendungsnummer);
     } else {
         document.getElementById("QR-Link").value = "";
     }
@@ -46,16 +48,24 @@ function sendungsnummer() {
     console.log("Sendungsnummer = " + (sendungsnummer || 'Nicht gefunden'));
 }
 
-document.getElementById("sendungsnummer").addEventListener("click", sendungsnummer);
-setInterval(sendungsnummer, 2000);
+document.getElementById("sendungsnummer").addEventListener("click", loopUpSendungNummer);
 
 
-    function deleteElementByAlt() {
-        var element = document.querySelector('img[alt="Info icon"]'); 
+let fetchRetourData = function (sendungsnummer) {
+    const url = `/retoure/lookup/barcode=${sendungsnummer}&type=qrcode`;
 
-            element.remove();
-    }
-    setInterval(
-        deleteElementByAlt, 2
-        );
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+        return response.json();  // Parse the response as JSON
+      })
+      .then(data => {
+        console.log('Success:', data);  // Log the response data
+      })
+      .catch(error => {
+        alert(`An error occurred: ${error.message}`);
+      });    
+};
     
