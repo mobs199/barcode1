@@ -23,12 +23,13 @@ function sendungsnummer() {
     const link = document.getElementById("QR-Link").value;
     console.log("Eingegebener Link: " + link);
 
-    const regex = /https:\/\/dringend\.ewanto\.de\/(500)?(\d{7})([A-Za-z0-9]?)$/;
+    const regex = /https:\/\/dringend\.ewanto\.de\/(500)?(\d{7})([A-Za-z0-9]?)/;
     const result = link.match(regex);
 
     let sendungsnummer = null;
 
     if (result) {
+        console.log(result);
         sendungsnummer = result[2];
 
         if (result[3]) {
