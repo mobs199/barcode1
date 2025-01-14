@@ -59,10 +59,10 @@ let fetchRetourData = function (sendungsnummer) {
         if (!response.ok) {
           throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
-        return response.json();  // Parse the response as JSON
+        return response.json();  
       })
       .then(data => {
-        console.log('Success:', data);  // Log the response data
+        console.log('Success:', data);  
       })
       .catch(error => {
         alert(`An error occurred: ${error.message}`);
