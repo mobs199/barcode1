@@ -76,6 +76,12 @@ let fetchRetourData = function (sendungsnummer) {
         console.log('Kunden-PLZ:', kundePlz);
         console.log('Kundenname:', kundeName);
         console.log('orderNumber:',orderNumber)
+
+        document.getElementById("").value=liefernummer;
+        document.getElementById("id_versandart").value=versandart;
+        document.getElementById("id_kunde_plz").value=kundePlz;
+        document.getElementById("id_kunde_name").value=kundeName;
+        document.getElementById("order_number").value=orderNumber;
       })
       .catch(error => {
         console.error(`An error occurred: ${error.message}`);
