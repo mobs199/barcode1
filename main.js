@@ -78,7 +78,7 @@ let fetchRetourData = function (sendungsnummer) {
         console.log('orderNumber:',orderNumber)
       })
       .catch(error => {
-        alert(`An error occurred: ${error.message}`);
+        console.error(`An error occurred: ${error.message}`);
       });    
       
 };
