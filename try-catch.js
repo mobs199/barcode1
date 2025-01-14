@@ -17,6 +17,7 @@ let fetchRetourData = async function (sendungsnummer) {
       let kundeName = data.kunde_name;
       let orderNumber = data.orderNumber;
   
+      console.log("Die daten Sind : ")
       console.log('Liefernummer:', liefernummer);
       console.log('Versandart:', versandart);
       console.log('Kunden-PLZ:', kundePlz);
