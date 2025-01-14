@@ -51,6 +51,7 @@ function loopUpSendungNummer() {
 document.getElementById("sendungsnummer").addEventListener("click", loopUpSendungNummer);
 
 
+    
 let fetchRetourData = function (sendungsnummer) {
     const url = `/retoure/lookup/barcode=${sendungsnummer}&type=qrcode`;
 
@@ -62,10 +63,19 @@ let fetchRetourData = function (sendungsnummer) {
         return response.json();  
       })
       .then(data => {
-        console.log('Success:', data);  
+        console.log('Success:', data);
+
+        let liefernummer = data.liefernummer;
+        let versandart = data.versandart;
+        let kundePlz = data.kunde_plz;
+        let kundeName = data.kunde_name;
+
+        console.log('Liefernummer:', liefernummer);
+        console.log('Versandart:', versandart);
+        console.log('Kunden-PLZ:', kundePlz);
+        console.log('Kundenname:', kundeName);
       })
       .catch(error => {
         alert(`An error occurred: ${error.message}`);
       });    
 };
-    
