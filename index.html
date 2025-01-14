@@ -9,6 +9,40 @@
 </head>
 
 <body>
+        <!-- Header -->
+    
+        <div id="header">
+            <div id="branding">
+            
+            </div>
+            
+            
+            <div id="user-tools">
+                
+                    Willkommen
+                    <strong>(redacted)</strong>.
+                
+                
+    <!-- Sprache: de-xx -->
+    
+            </div>
+            
+            
+            
+        </div>
+        
+        <!-- END Header -->
+        
+          <nav aria-label="„Brotkrümel“">
+            
+    <div class="breadcrumbs">
+    <a href="/">Start</a>
+    › <a href="/produkte/">2 Lager &amp; Preise</a>
+    › <a href="/produkte/retourinhalt/">Retouren</a>
+    › Retour hinzufügen
+    </div>
+    
+          </nav>
     <div class="container">
         <br>
         
@@ -30,8 +64,395 @@
         </form>
     </div>
     
+<div id="container">
+
+    
+
+    
+    
+
+    <div class="main" id="main">
+      
+      <div id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Retour hinzufügen</h1>
+          
+          <div id="content-main">
+
+
+
+<form method="post" id="retourinhalt_form" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="(redacted)">
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-versandart field-kunde_name field-kunde_plz">
+            <div class="flex-container form-multiline">
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-versandart">
+                            
+                                <label for="id_versandart">Versandart:</label>
+                                
+                                    <input type="text" name="versandart" class="vTextField" maxlength="150" id="id_versandart">
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_versandart_helptext">
+                            <div>z.b. "Briefmarke 1,45€" oder "Rückläufer"</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-kunde_name">
+                            
+                                <label class="inline" for="id_kunde_name">Name des Absenders:</label>
+                                
+                                    <input type="text" name="kunde_name" class="vTextField" maxlength="100" id="id_kunde_name">
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_kunde_name_helptext">
+                            <div>z.B. Max Mustermann</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-kunde_plz">
+                            
+                                <label class="inline" for="id_kunde_plz">Postleitzahl:</label>
+                                
+                                    <input type="text" name="kunde_plz" class="vTextField" maxlength="5" id="id_kunde_plz">
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_kunde_plz_helptext">
+                            <div>Deutsche PLZ z.B. "12489" (Ausland: Freitext verwenden)</div>
+                        </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    
+        <div class="form-row field-typ field-liefernummer field-amazon">
+            <div class="flex-container form-multiline">
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-typ">
+                            
+                                <label class="required" for="id_typ">Typ:</label>
+                                
+                                    <select name="typ" id="id_typ">
+  <option value="Rücksendung" selected="selected">Rücksendung: Kunde schickt zurück</option>
+
+  <option value="Nicht Zustellbar">Nicht zustellbar: Kommt zurück, weil nicht zustellbar (z.B. 'Empfänger nicht ermittelbar', 'Addressfehler')</option>
+
+  <option value="Nicht abgeholt">Kommt zurück, weil Kunde nicht abgeholt hat.</option>
+
+  <option value="Annahmeverweigerung">Annahme verweigert: Es steht wörtlich Annahme verweigert drauf</option>
+
+</select>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-liefernummer">
+                            
+                                <label class="inline" for="id_liefernummer">Liefernummer:</label>
+                                
+                                    <input type="numeric" name="liefernummer" min="-9223372036854775808" max="9223372036854775807" id="id_liefernummer">
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_liefernummer_helptext">
+                            <div>Z.b. mit 500 prefix: 5009999999 oder ohne: 9999999</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-amazon">
+                            
+                                <label class="inline" for="id_amazon">Amazon-Bestellnummer:</label>
+                                
+                                    <input type="text" name="amazon" class="vTextField" maxlength="19" id="id_amazon">
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_amazon_helptext">
+                            <div>321-7654321-7654321</div>
+                        </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    
+        <div class="form-row field-person field-freitext field-haltbarkeit">
+            <div class="flex-container form-multiline">
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-person">
+                            
+                                <label class="required" for="id_person">Person:</label>
+                                
+                                    <select name="person" required="" id="id_person">
+  <option value="">---------</option>
+
+  <option value="V">VfJ Werkstätten</option>
+
+  <option value="J">Jim</option>
+
+  <option value="H">Helena</option>
+
+  <option value="C">Christoph</option>
+
+  <option value="3">Franzi</option>
+
+  <option value="8">Marie</option>
+
+  <option value="7">Jörg</option>
+
+  <option value="K">Kathleen</option>
+
+  <option value="6" selected="selected">Neuer MA</option>
+
+  <option value="0">Nicht erfasst</option>
+
+</select>
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_person_helptext">
+                            <div>Wer hat die Sendung hier eingetragen?</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-freitext">
+                            
+                                <label class="inline" for="id_freitext">Freitext:</label>
+                                
+                                    <textarea name="freitext" cols="40" rows="10" class="vLargeTextField" maxlength="2000" id="id_freitext"></textarea>
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_freitext_helptext">
+                            <div>Nur falls es noch etwas gibt, dass in kein spezifischeres Feld eingetragen werden konnte.</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-haltbarkeit">
+                            
+                                <label class="inline" for="id_haltbarkeit">Haltbarkeitsdatum:</label>
+                                
+                                    <p class="date">
+  <input type="text" name="haltbarkeit" class="vDateField" size="10" id="id_haltbarkeit"><span class="datetimeshortcuts">&nbsp;<a href="#">Heute</a>&nbsp;|&nbsp;<a href="#" id="calendarlink0"><span class="date-icon" title="Datum wählen"></span></a></span>
+
+
+</p>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    
+</fieldset>
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-angelegt field-zuletzt_geändert field-version">
+            <div class="flex-container form-multiline">
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-angelegt">
+                            
+                                <label>Angelegt:</label>
+                                
+                                    <div class="readonly">-</div>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-zuletzt_geändert">
+                            
+                                <label class="inline">Zuletzt geändert:</label>
+                                
+                                    <div class="readonly">-</div>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-version">
+                            
+                                <label class="inline">Version:</label>
+                                
+                                    <div class="readonly">0</div>
+                                
+                            
+                        </div>
+                    
+                        <div class="help">
+                            <div>Interne Versionierung. Tritt hier ein Problem auf, wurde ein Datensatz mehrfach gleichzeitig bearbeitet.</div>
+                        </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    
+        <div class="form-row field-geprüft field-bearbeitet">
+            <div class="flex-container form-multiline">
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-geprüft">
+                            
+                                <label for="id_geprüft">Geprüft:</label>
+                                
+                                    <select name="geprüft" id="id_geprüft">
+  <option value="">Neutral = Prüfung fertig (siehe Freitext), Kunde kann Antwort bekommen</option>
+
+  <option value="True" selected="selected">Ja = keine Prüfung erforderlich bzw Kunde bekam Feedback zu Prüfung</option>
+
+  <option value="False">Nein = Prüfung steht aus</option>
+
+</select>
+                                
+                            
+                        </div>
+                    
+                        <div class="help" id="id_geprüft_helptext">
+                            <div>Setzen = Retoure wurde nach Prüfung erneut bearbeitet (oder brauchte das nicht)</div>
+                        </div>
+                    
+                </div>
+            
+                <div>
+                    
+                        <div class="flex-container fieldBox field-bearbeitet">
+                            
+                                <input type="checkbox" name="bearbeitet" id="id_bearbeitet"><label class="vCheckboxLabel inline" for="id_bearbeitet">Bearbeitet</label>
+                            
+                        </div>
+                    
+                        <div class="help" id="id_bearbeitet_helptext">
+                            <div>Setzen = Diese Retoure wurde vom Kundenservice bearbeitet</div>
+                        </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="Sichern" class="default" name="_save">
+
+<input type="submit" value="Sichern und neu hinzufügen" name="_addanother">
+<input type="submit" value="Sichern und weiter bearbeiten" name="_continue">
+
+
+
+</div>
+
+
+
+</div>
+</form></div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></symbol>
+</svg>
+<!-- END SVGs -->
+
+
+<div style="display: none; position: absolute;" class="calendarbox module" id="calendarbox0"><div><a href="#" class="calendarnav-previous">&lt;</a><a href="#" class="calendarnav-next">&gt;</a></div><div id="calendarin0" class="calendar"><table><caption>Januar 2025</caption><tbody><tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th>Sa</th><th>So</th></tr><tr><td class="nonday"> </td><td class="nonday"> </td><td class=""><a href="#">1</a></td><td class=""><a href="#">2</a></td><td class=""><a href="#">3</a></td><td class=""><a href="#">4</a></td><td class=""><a href="#">5</a></td></tr><tr><td class=""><a href="#">6</a></td><td class=""><a href="#">7</a></td><td class=""><a href="#">8</a></td><td class="today"><a href="#">9</a></td><td class=""><a href="#">10</a></td><td class=""><a href="#">11</a></td><td class=""><a href="#">12</a></td></tr><tr><td class=""><a href="#">13</a></td><td class=""><a href="#">14</a></td><td class=""><a href="#">15</a></td><td class=""><a href="#">16</a></td><td class=""><a href="#">17</a></td><td class=""><a href="#">18</a></td><td class=""><a href="#">19</a></td></tr><tr><td class=""><a href="#">20</a></td><td class=""><a href="#">21</a></td><td class=""><a href="#">22</a></td><td class=""><a href="#">23</a></td><td class=""><a href="#">24</a></td><td class=""><a href="#">25</a></td><td class=""><a href="#">26</a></td></tr><tr><td class=""><a href="#">27</a></td><td class=""><a href="#">28</a></td><td class=""><a href="#">29</a></td><td class=""><a href="#">30</a></td><td class=""><a href="#">31</a></td><td class="nonday"> </td><td class="nonday"> </td></tr></tbody></table></div><div class="calendar-shortcuts"><a href="#">Gestern</a>&nbsp;|&nbsp;<a href="#">Heute</a>&nbsp;|&nbsp;<a href="#">Morgen</a></div><p class="calendar-cancel"><a href="#">Abbrechen</a></p></div>
+</body>
+
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="main.js"></script>
 </body>
 
 </html>
+
