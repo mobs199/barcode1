@@ -41,6 +41,9 @@ function loopUpSendungNummer() {
     if (sendungsnummer) {
         document.getElementById("Sd-Nr").value = sendungsnummer;
         fetchRetourData(sendungsnummer);
+        document.getElementById("id_typ").value = "Nicht Zustellbar";
+        document.getElementById("id_geprüft").value = "True";
+        document.getElementById("id_liefernummer").value = sendungsnummer;
     } else {
         document.getElementById("QR-Link").value = "";
     }
@@ -84,7 +87,7 @@ let fetchRetourData = function (sendungsnummer) {
         document.getElementById("order_number").value=orderNumber;
       })
       .catch(error => {
-        console.error(`An error occurred: ${error.message}`);
+        console.error(`An error occurred: Sendungsnummer nicht gefunden`);
       });    
       
 };
